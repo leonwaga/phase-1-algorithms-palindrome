@@ -1,6 +1,16 @@
-function isPalindrome(word) {
-  // Write your algorithm here
+  function isPalindrome(word) {
+  // create loop to check through string halfway
+  for( let startIndex = 0; startIndex < word.length / 2; startIndex++ ) {
+    const endIndex = word.length - 1 - startIndex;
+    // compare first character with last character
+    if (word[startIndex] !== word[endIndex]) {
+      return false;
+    }
+  }
+
+  return true;
 }
+
 
 /* 
   Add your pseudocode here
